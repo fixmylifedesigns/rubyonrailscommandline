@@ -1,6 +1,6 @@
 require 'json'
 require "thor"
-
+require 'yaml'
 # data = JSON.parse(File.read('products.json'))
 
 class Product
@@ -40,13 +40,29 @@ class ShopApp < Thor
         if genderOptions[name[0]]
             product.options[:gender]= name[0]
         else
-            p "Gender: male, female"
+            string = "Gender:"
+            genderOptions.map do |n, i|
+                if genderOptions.keys[0] === n
+                    string = string + " " + n 
+                else
+                    string = string + ", " + n 
+                end
+            end
+            p string 
         end
 
         if colorOptions[name[1]] 
             product.options[:color]= name[1]
         else
-            p "Color: red, blue, green, navy, black"
+            string = "Color:"
+            colorOptions.map do |n, i|
+                if colorOptions.keys[0] === n
+                    string = string + " " + n 
+                else
+                    string = string + ", " + n 
+                end
+            end
+            p string 
         end
 
         if sizeOptions[name[2]] 
@@ -70,7 +86,15 @@ class ShopApp < Thor
               end
             # p product
         else
-            p "Size: small, medium, large, extra-large, 2x-large"
+            string = "Size:"
+            sizeOptions.map do |n, i|
+                if sizeOptions.keys[0] === n
+                    string = string + " " + n 
+                else
+                    string = string + ", " + n 
+                end
+            end
+            p string 
         end
 
         # # p hash
@@ -85,10 +109,18 @@ class ShopApp < Thor
         sizeOptions = {"x-small" => "size", "small" =>"size", "medium" => "size", "large" => "size","x-large" =>"size" } 
         styleOptions = {"matt" =>"style", "glossy" => "style"} 
 
-        if sizeOptions[name[0]]
-            # product.options[:size]= name[0]
-        else
-            p "Size : #{sizeOptions.keys.inspect.to_s}"
+        if !sizeOptions[name[0]]
+            string = "Size: "
+            sizeOptions.map do |n, i|
+                # p typeOptions.keys[0]
+                if sizeOptions.keys[0] === n
+                    string = string + " " + n 
+                else
+                    string = string + ", " + n 
+                end
+            end
+            p string
+            # p "Size : #{sizeOptions.keys.inspect.to_s}"
         end
         if styleOptions[name[1]]
             # product.options[:size]= name[1]
@@ -106,7 +138,16 @@ class ShopApp < Thor
                 f.write(data.to_json)
               end
         else
-            p "Style : #{styleOptions.keys.inspect.to_s}"
+            string = "Style: "
+            styleOptions.map do |n, i|
+                # p typeOptions.keys[0]
+                if styleOptions.keys[0] === n
+                    string = string + " " + n 
+                else
+                    string = string + ", " + n 
+                end
+            end
+            p string
         end
     end
 
@@ -131,7 +172,18 @@ class ShopApp < Thor
                 f.write(data.to_json)
               end
         else
-            p "Style : #{typeOptions.keys.inspect.to_s}"
+            string = "Type:"
+            # typeOptions.map { |n, i| string = string + " " + n } 
+            typeOptions.map do |n, i|
+                # p typeOptions.keys[0]
+                if typeOptions.keys[0] === n
+                    string = string + " " + n 
+                else
+                    string = string + ", " + n 
+                end
+            end
+            p string 
+            # p "Style : #{typeOptions.keys.inspect.to_s}".to_yaml
         end
         # p product
     end

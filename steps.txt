@@ -18,6 +18,9 @@ second plan
 7. put options text code cleaner on console
 8. create a new file with cleaner code 
 9. create spec file for testing
+10. run rspec --init to create helper
+11. set up code in rspec for testing 
+
 
 References:
 adding to hash : 
@@ -30,3 +33,4 @@ commandline applications:https://www.rubyguides.com/2018/12/ruby-argv/
 thor gem: https://www.rubyguides.com/2018/12/ruby-argv/
 creating hash in ruby for easy search: http://alanwsmith.com/convert-ruby-array-into-keys-of-new-hash
 creating json file with ruby: https://stackoverflow.com/questions/5507512/how-to-write-to-a-json-file-in-the-correct-format
+rspec gem: https://relishapp.com/rspec/rspec-core/docs/command-line
