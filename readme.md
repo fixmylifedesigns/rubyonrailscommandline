@@ -6,7 +6,7 @@ Given a JSON file of product data, this program takes in a product type and zero
 The Practice folder is just filled with some scrapped code and practices I did to get more familiar with the ruby language.
 
 ### Testing
-This project uses the Rspec gem. RSpec is a testing tool for Ruby, created for behavior-driven development (BDD). It is the most frequently used testing library for Ruby in production applications.
+This project uses the Rspec gem. Rspec is a testing tool for Ruby, created for behavior-driven development (BDD). It is the most frequently used testing library for Ruby in production applications.
 
 Example: Rspec Testing.
 ```
@@ -22,6 +22,13 @@ Example: Rspec Testing.
 :heavy_check_mark: For the sake of simplicity, you can assume options will always be in the order specified in `products.json`.<br/>
 
 ### Example Input/Output
+
+Example: All fields filled correctly.
+```
+> ./my_program tshirt male blue large
+{:id=>9, :product_type=>"tshirt", :options=>{:gender=>"male", :color=>"blue", :size=>"large"}}
+```
+
 Example: Product type only.
 ```
 > ./my_program tshirt
