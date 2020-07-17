@@ -14,6 +14,13 @@ require "thor"
 # Created Global variables to avoid repeating to much and for certian variables 
 # to be available in all methods
 $jsonDirc = File.join(File.dirname(__FILE__), './products.json')
+# Here I check to make sure a json file exist if it doesn't an empty one is created
+# we can then populate it with our new data
+if !File.exist? ($jsonDirc)
+  File.open($jsonDirc,"w") do |f|
+    f.write([].to_json)
+  end
+end
 $readJsonData
 $message
 # created a hash table with data on products and options for o(1) search
@@ -83,7 +90,9 @@ class ShopApp < Thor
         if sizeOptions[name[2]] && colorOptions[name[1]] && genderOptions[name[0]]
             $readJsonData.push(
                 {
-                "id": $readJsonData[-1]["id"] + 1,
+                # Here I have a condition that checks to see if there is a last entry in the data so I 
+                # can then use their id and add 1 to it for the id of the new data
+                "id": $readJsonData[-1] ? $readJsonData[-1]["id"] + 1 : 1,
                 "product_type": "tshirt",
                 "options": {
                   "gender": name[0],
@@ -94,7 +103,7 @@ class ShopApp < Thor
             # writting new json file with added data
             File.open($jsonDirc,"w") do |f|
                 f.write($readJsonData.to_json)
-              end
+            end
             # here I am printing out the last input in the json data to assure the user their data
             # was added
             p $readJsonData[-1]
@@ -123,7 +132,7 @@ class ShopApp < Thor
         if styleOptions[name[1]] && sizeOptions[name[0]]
             $readJsonData.push(
                 {
-                "id": $readJsonData[-1]["id"] + 1,
+                "id": $readJsonData[-1] ? $readJsonData[-1]["id"] + 1 : 1,
                 "product_type": "sticker",
                 "options": {
                   "size": name[0],
@@ -150,7 +159,7 @@ class ShopApp < Thor
         if typeOptions[name[0]] 
             $readJsonData.push(
                 {
-                "id": $readJsonData[-1]["id"] + 1,
+                "id": $readJsonData[-1] ? $readJsonData[-1]["id"] + 1 : 1,
                 "product_type": "mug",
                 "options": {
                   "type": name[0]
@@ -158,7 +167,7 @@ class ShopApp < Thor
               })
             File.open($jsonDirc,"w") do |f|
                 f.write($readJsonData.to_json)
-              end
+            end
             p $readJsonData[-1]
             return $readJsonData[-1]
         else

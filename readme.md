@@ -8,6 +8,7 @@ This project uses the Rspec gem. RSpec is a testing tool for Ruby, created for b
 
 Example: Rspec Testing.
 ```
+
 > rspec ./spec/cli_shop_spec.rb
 
 ```
@@ -79,3 +80,4 @@ https://stackoverflow.com/questions/6879589/using-custom-to-json-method-in-neste
 - global variables: https://stackoverflow.com/questions/12112765/how-to-reference-global-variables-and-class-variables
 - directory: https://stackoverflow.com/questions/12832148/how-do-i-read-from-a-file-in-the-same-directory
 - fake args array for rspec: https://stackoverflow.com/questions/1274675/what-does-warray-mean
+
