@@ -1,7 +1,9 @@
 # Ruby CLI Program
 
 ## Project Summary
-Using the Thor gem the program is able to simplify the process of parsing arguments passed to your CLI application. Given a JSON file of product data, this program takes in a product type and zero or more product options, and returns the remaining product option categories with the available options. The JSON gem is used in this project to allow parsing the json data from ruby data structure.
+Using the Thor gem the program is able to simplify the process of parsing arguments passed to your CLI application.  
+Given a JSON file of product data, this program takes in a product type and zero or more product options, and returns the remaining product option categories with the available options. The JSON gem is used in this project to allow parsing the json data from ruby data structure. 
+The Practice folder is just filled with some scrapped code and practices I did to get more familiar with the ruby language.
 
 ### Testing
 This project uses the Rspec gem. RSpec is a testing tool for Ruby, created for behavior-driven development (BDD). It is the most frequently used testing library for Ruby in production applications.
