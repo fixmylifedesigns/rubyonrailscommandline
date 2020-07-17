@@ -81,32 +81,32 @@ https://stackoverflow.com/questions/6879589/using-custom-to-json-method-in-neste
 - directory: https://stackoverflow.com/questions/12832148/how-do-i-read-from-a-file-in-the-same-directory
 - fake args array for rspec: https://stackoverflow.com/questions/1274675/what-does-warray-mean
 
-### Plans on how to attack this project
+## Plans on how to attack this project
 
-#### First Plan
+### First Plan
 
 The first plan was to build a ui applicaiton for the terminal
 
-1.going to start by making a request to the raw json data michael provided in github
-2. create a Shop class
-3. create Shop
+1. Going to start by making a request to the raw json data michael provided in github
+2. Create a Shop class
+3. Create Shop
 4. populate the products attribute in shop class with the data recieved from get request
-5. create product class
-6. connect product class to Shop
-7. create command line menu
+5. Create product class
+6. Connect product class to Shop
+7. Create command line menu
 
 #### Second and Final Plan
 
 After understanding the problem better I realized I was making my life a bit more difficult with the first plan so I scrapped it and started researching more on cli programs.
 
-1. thor 
-2. add options for tshirts stickers and mugs
-3. conditions for missing answers
-4. read json file
-5. add product to data
-6. update json
-7. put options text code cleaner on console
-8. create a new file with cleaner code 
-9. create spec file for testing
-10. run rspec --init to create helper
-11. set up code in rspec for testing
+1. Implement Thor Gem
+2. Add methods for tshirts stickers and mugs
+3. Conditions for missing answers
+4. Read json file
+5. Add product to data
+6. Update json
+7. Put options text code cleaner on console
+8. Create a new file with cleaner code 
+9. Create spec file for testing
+10. Run rspec --init to create helper
+11. Set up code in rspec for testing
