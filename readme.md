@@ -25,13 +25,13 @@ Example: Rspec Testing.
 
 Example: All fields filled correctly.
 ```
-> ./my_program tshirt male blue large
+> ./cli_shop.rb tshirt male blue large
 {:id=>9, :product_type=>"tshirt", :options=>{:gender=>"male", :color=>"blue", :size=>"large"}}
 ```
 
 Example: Product type only.
 ```
-> ./my_program tshirt
+> ./cli_shop.rb tshirt
 Gender: male, female
 Color: red, blue, green
 Size: small, medium, large, extra-large, 2x-large
@@ -39,21 +39,21 @@ Size: small, medium, large, extra-large, 2x-large
 
 Example: No Gender Option when 'female' is given
 ```
-> ./my_program tshirt female
+> ./cli_shop.rb tshirt female
 Color: red, blue, green
 Size: small, medium, large, extra-large, 2x-large
 ```
 
 Example: Options for Sticker
 ```
-> ./my_program sticker
+> ./cli_shop.rb sticker
 Size: x-small, small, medium, large, x-large
 Style: matte, glossy
 ```
 
 Example: Options for Small Sticker (no Size Option when 'small' is given)
 ```
-> ./my_program sticker small
+> ./cli_shop.rb sticker small
 Style: matte
 ```
 
