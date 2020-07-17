@@ -64,23 +64,6 @@ Style: matte
 ]
 ```
 
-
-### Used resources
-- Adding to hash : 
-https://stackoverflow.com/questions/9571768/how-to-add-new-item-to-hash/37676702
-- Read json data and add to ruby : 
-https://stackoverflow.com/questions/4464050/ruby-objects-and-json-serialization-without-rails?rq=1
-https://stackoverflow.com/questions/3226054/how-to-convert-a-ruby-object-to-json
-https://stackoverflow.com/questions/6879589/using-custom-to-json-method-in-nested-objects/6880638#6880638
-- commandline applications: https://www.rubyguides.com/2018/12/ruby-argv/
-- thor gem: https://www.rubyguides.com/2018/12/ruby-argv/
-- creating hash in ruby for easy search: http://alanwsmith.com/convert-ruby-array-into-keys-of-new-hash
-- creating json file with ruby: https://stackoverflow.com/questions/5507512/how-to-write-to-a-json-file-in-the-correct-format
-- rspec gem: https://relishapp.com/rspec/rspec-core/docs/command-line
-- global variables: https://stackoverflow.com/questions/12112765/how-to-reference-global-variables-and-class-variables
-- directory: https://stackoverflow.com/questions/12832148/how-do-i-read-from-a-file-in-the-same-directory
-- fake args array for rspec: https://stackoverflow.com/questions/1274675/what-does-warray-mean
-
 ## Plans on how to attack this project
 
 ### First Plan
@@ -95,7 +78,7 @@ The first plan was to build a ui applicaiton for the terminal
 6. Connect product class to Shop
 7. Create command line menu
 
-#### Second and Final Plan
+### Second and Final Plan
 
 After understanding the problem better I realized I was making my life a bit more difficult with the first plan so I scrapped it and started researching more on cli programs.
 
@@ -110,3 +93,27 @@ After understanding the problem better I realized I was making my life a bit mor
 9. Create spec file for testing
 10. Run rspec --init to create helper
 11. Set up code in rspec for testing
+
+
+## Technologies used
+- Ruby: https://www.ruby-lang.org/en/
+- Thor Gem: http://whatisthor.com/
+- Rspec Gem: https://rspec.info/
+- Json Gem: https://ruby-doc.org/stdlib-2.7.1/libdoc/json/rdoc/JSON.html
+
+
+## Used resources
+- Adding to hash : 
+https://stackoverflow.com/questions/9571768/how-to-add-new-item-to-hash/37676702
+- Read json data and add to ruby : 
+https://stackoverflow.com/questions/4464050/ruby-objects-and-json-serialization-without-rails?rq=1
+https://stackoverflow.com/questions/3226054/how-to-convert-a-ruby-object-to-json
+https://stackoverflow.com/questions/6879589/using-custom-to-json-method-in-nested-objects/6880638#6880638
+- commandline applications: https://www.rubyguides.com/2018/12/ruby-argv/
+- thor gem: https://www.rubyguides.com/2018/12/ruby-argv/
+- creating hash in ruby for easy search: http://alanwsmith.com/convert-ruby-array-into-keys-of-new-hash
+- creating json file with ruby: https://stackoverflow.com/questions/5507512/how-to-write-to-a-json-file-in-the-correct-format
+- rspec gem: https://relishapp.com/rspec/rspec-core/docs/command-line
+- global variables: https://stackoverflow.com/questions/12112765/how-to-reference-global-variables-and-class-variables
+- directory: https://stackoverflow.com/questions/12832148/how-do-i-read-from-a-file-in-the-same-directory
+- fake args array for rspec: https://stackoverflow.com/questions/1274675/what-does-warray-mean
