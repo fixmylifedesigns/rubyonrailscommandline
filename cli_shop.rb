@@ -36,19 +36,19 @@ $productOptions = {
 
 # created this method to map over options available in the hash table to then 
 # print message for the user o(n)
-def optionMapping(options, name)
+def optionMapping(options, name, mes = false)
     # in this method I recieve the missing options for a given choice which I 
     # then map over and add to the global string 
+    # incase this method wants to be used by another program for example the rspec
+    # I have added the mes variable if given a string it will use that string instead of
+    # what was left over from a previous method
+    mes ? $message = mes : ""
     string = name + ":"
     options.map do |n, i|
-        # if value equals first options its added to the string normally 
-        if options.keys[0] === n
-            string = string + " " + n 
-        else
-            # if value isn't the first options a comma is added to the start of the 
-            # word to separate it from the one before it
-            string = string + ", " + n 
-        end
+        # if value isn't the first options a comma is added to the start of the 
+        # word to separate it from the one before it
+        options.keys[0] === n ? string = string + " " + n : string = string + ", " + n 
+
     end
     $message = $message + string + "\n"
 end

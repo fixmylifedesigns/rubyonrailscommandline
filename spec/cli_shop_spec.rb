@@ -209,27 +209,35 @@ describe "CLI Project" do
   # Here I am testing the optionsmapping method I created to help with making the messages for the user
   # I should be able to put any kind of data and get a message in return with no errors
   describe "Options mapping method" do
-
-
-
-    it "message" do
-      exampleHash = {
-        "tshirt" => {
-          "gender" => {"male" =>"gender", "female" => "gender"},
-          "color" => {"white" =>"color","red" =>"color","navy" =>"color","blue" =>"green","black" =>"color"},
-          "size" => {"small" =>"size", "medium" => "size", "large" => "size","extra-large" =>"size", "2x-large" => "size"} 
-        },
-        "sticker" => {
-          "size" => {"x-small" => "size", "small" =>"size", "medium" => "size", "large" => "size","x-large" =>"size" },
-          "style" => {"matt" =>"style", "glossy" => "style"} 
-        },
-        "mug" => {
-          "type" => {"coffee-mug" =>"type", "travel-mug" => "type"}
-        }
+    $exampleHash = {
+      "tshirt" => {
+        "gender" => {"male" =>"gender", "female" => "gender"},
+        "color" => {"white" =>"color","red" =>"color","navy" =>"color","blue" =>"green","black" =>"color"},
+        "size" => {"small" =>"size", "medium" => "size", "large" => "size","extra-large" =>"size", "2x-large" => "size"} 
+      },
+      "sticker" => {
+        "size" => {"x-small" => "size", "small" =>"size", "medium" => "size", "large" => "size","x-large" =>"size" },
+        "style" => {"matt" =>"style", "glossy" => "style"} 
+      },
+      "mug" => {
+        "type" => {"coffee-mug" =>"type", "travel-mug" => "type"}
       }
-      # p exampleHash["tshirt"] 
-      ShopApp.start(%w[])
-      expect(optionMapping(exampleHash["tshirt"]["gender"], "Gender" )).to eq ""
+    }
+
+    it "Creating a message with the inserted data" do
+
+      expect(optionMapping($exampleHash["tshirt"]["gender"], "Gender", "" )).to eq "Gender: male, female\n"
+      expect(optionMapping($exampleHash["tshirt"]["color"], "Color", "" )).to eq "Color: white, red, navy, blue, black\n"
+
+    end
+
+    it "Creating a message with the inserted data and added text to the start of the message" do
+
+      text1 = "These are your options"
+      text2= "Please make a Choice for"
+      expect(optionMapping($exampleHash["tshirt"]["gender"], "Gender", "#{text1} \n" )).to eq "#{text1} \nGender: male, female\n"
+      expect(optionMapping($exampleHash["tshirt"]["color"], "Color", "#{text2} " )).to eq "#{text2} Color: white, red, navy, blue, black\n"
+
     end
   end
 
