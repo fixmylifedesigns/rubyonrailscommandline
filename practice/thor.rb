@@ -189,5 +189,10 @@ class ShopApp < Thor
     end
 end
 
+class TestShop
+
+
+end
+
 ShopApp.start(ARGV)
 # p JSON.parse(File.read('products.json'))

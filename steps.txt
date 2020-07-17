@@ -34,3 +34,6 @@ thor gem: https://www.rubyguides.com/2018/12/ruby-argv/
 creating hash in ruby for easy search: http://alanwsmith.com/convert-ruby-array-into-keys-of-new-hash
 creating json file with ruby: https://stackoverflow.com/questions/5507512/how-to-write-to-a-json-file-in-the-correct-format
 rspec gem: https://relishapp.com/rspec/rspec-core/docs/command-line
+global variables: https://stackoverflow.com/questions/12112765/how-to-reference-global-variables-and-class-variables
+directory: https://stackoverflow.com/questions/12832148/how-do-i-read-from-a-file-in-the-same-directory
+fake args array for rspec: https://stackoverflow.com/questions/1274675/what-does-warray-mean
