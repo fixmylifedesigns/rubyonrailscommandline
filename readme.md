@@ -13,10 +13,10 @@ Example: Rspec Testing.
 ```
 
 ### Specification
-:heavy_check_mark: A command line program that takes in a product type and 0 or more product options. `./my_program product_type [option1 option2 option3]`
-:heavy_check_mark: Returns available product options for the criteria, excluding the options that have already been specified
-:heavy_check_mark: A product list `products.json` is included;  your app should load it or otherwise be able to handle a new product list (with the same specification) being swapped in.
-:heavy_check_mark: For the sake of simplicity, you can assume options will always be in the order specified in `products.json`.
+:heavy_check_mark: A command line program that takes in a product type and 0 or more product options. `./my_program product_type [option1 option2 option3]` <br/>
+:heavy_check_mark: Returns available product options for the criteria, excluding the options that have already been specified <br/>
+:heavy_check_mark: A product list `products.json` is included;  your app should load it or otherwise be able to handle a new product list (with the same specification) being swapped in.<br/>
+:heavy_check_mark: For the sake of simplicity, you can assume options will always be in the order specified in `products.json`.<br/>
 
 ### Example Input/Output
 Example: Product type only.
